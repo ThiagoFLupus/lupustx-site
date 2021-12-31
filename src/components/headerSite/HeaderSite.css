@@ -1,0 +1,70 @@
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 420px) {
+    .HeaderSite{
+        position: fixed;
+        width: 100%;
+        margin-top: -100px;
+    }
+    .area-logo-header-small{
+        width: 50%;
+        height: 100px;
+        float: left;
+        background: blue;
+    }
+    .area-menu-header-small{
+        width: 120px;
+        height: 100px;
+        float: right;
+    }
+    .drawer-menu{
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+    }
+    .item-drawer-menu{
+        width: 100%;
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        font-size: x-large;
+        color: white;
+    }
+}
+
+@media (min-width: 421px) and (max-width: 650px){
+    .HeaderSite{
+        position: fixed;
+        width: 100%;
+        margin-top: -100px;
+    }
+    .area-logo-header-small{
+        width: 50%;
+        height: 100px;
+        float: left;
+        background: blue;
+    }
+    .Tab-component{
+       position: fixed; 
+       right: 10%;
+       padding: 40px 0px 0px 0px;
+    }
+    .Tabs-component{
+        height: 50px;
+        text-align: end;
+    }
+}
+
+@media (min-width: 651px){
+    .HeaderSite{
+        position: fixed;
+        width: 100%;
+        margin-top: -100px;
+    }
+}

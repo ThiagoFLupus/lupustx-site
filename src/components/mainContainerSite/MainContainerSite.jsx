@@ -1,6 +1,8 @@
+import './MainContainerSite.css';
+
 function MainContainerSite(){
     return (
-        <div>
+        <div className="MainContainerSite">
             <h1>MainContainer site</h1>
         </div>
     );

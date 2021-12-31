@@ -1,6 +1,8 @@
+import './FooterSite.css';
+
 function FooterSite(){
     return (
-        <div>
+        <div className="FooterSite">
             <h1>Footer site</h1>
         </div>
     );
