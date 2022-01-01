@@ -3,7 +3,7 @@ import './FooterSite.css';
 function FooterSite(){
     return (
         <div className="FooterSite">
-            <h1>Footer site</h1>
+            <h1 style={{height: '500px'}}>Footer site</h1>
         </div>
     );
 }

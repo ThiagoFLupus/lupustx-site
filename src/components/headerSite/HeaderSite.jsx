@@ -15,8 +15,27 @@ function HeaderSite(props){
     const [openedMenu, setOpenedMenu]= useState(false);
     const location= useLocation();
     const [selectedTab, setSelectedTab]= useState(0);
+    const [showMinimalLogo, setShowMinimalLogo]= useState(true);
+    console.log(showMinimalLogo);
+
+    const scrollEventLogo= ()=> {
+        if(window.scrollY > 250) setShowMinimalLogo(true);
+        else setShowMinimalLogo(false);
+    }
 
     useEffect(()=> {
+        console.log(window.scrollY);
+        if(location.pathname === '/'){
+            setShowMinimalLogo(false)
+            document.addEventListener('scroll', scrollEventLogo);
+        }else setShowMinimalLogo(true); 
+        return _ => {
+            window.removeEventListener('scroll', scrollEventLogo)
+        }
+    });
+
+    useEffect(()=> {
+        if(location.pathname === '/') setShowMinimalLogo(false); 
         if(location.pathname === '/products') setSelectedTab(1);    
         if(location.pathname === '/talk-to-me') setSelectedTab(2);
     // eslint-disable-next-line
@@ -28,8 +47,11 @@ function HeaderSite(props){
 
     return (
         <div className="HeaderSite" style={{background: colorApp.mostStrongBack}}>
-            <div className="area-logo-header-small">
             
+            <div className="area-logo-header-small">
+                {showMinimalLogo &&
+                    <img style={{height: '100px', width: '100%', background: 'yellow', marginTop: '0px', marginLeft: '0px'}} alt=""></img>
+                }
             </div>
 
             {sizeWindowRedux <= 420 &&

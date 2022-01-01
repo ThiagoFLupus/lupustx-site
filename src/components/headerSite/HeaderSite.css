@@ -17,6 +17,7 @@ img{
         position: fixed;
         width: 100%;
         margin-top: -100px;
+        z-index: 100;
     }
     .area-logo-header-small{
         width: 50%;
@@ -48,6 +49,7 @@ img{
         position: fixed;
         width: 100%;
         margin-top: -100px;
+        z-index: 100;
     }
     .area-logo-header-small{
         width: 50%;
@@ -71,12 +73,13 @@ img{
         position: fixed;
         width: 100%;
         margin-top: -100px;
+        z-index: 100;
     }
     .area-logo-header-small{
         width: 50%;
         height: 100px;
         float: left;
-        
+        background: blue;
     }
     .Tab-component{
         position: fixed; 

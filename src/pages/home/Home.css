@@ -1,0 +1,17 @@
+.Home{
+    width: 100%;
+}
+
+.video-presentation{
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
+
+@media (max-width: 420px) {
+    
+}
+
+@media (min-width: 421px) {
+    
+}
