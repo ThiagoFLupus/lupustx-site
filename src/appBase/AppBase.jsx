@@ -8,9 +8,7 @@ function AppBase() {
     <div className="AppBase">
       <HeaderSite/>
       <div>
-        <MainContainerSite>
-          Header
-        </MainContainerSite>
+        <MainContainerSite />
         <FooterSite />
       </div>
     </div>
