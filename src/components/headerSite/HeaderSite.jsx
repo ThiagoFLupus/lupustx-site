@@ -15,31 +15,45 @@ function HeaderSite(props){
     const [openedMenu, setOpenedMenu]= useState(false);
     const location= useLocation();
     const [selectedTab, setSelectedTab]= useState(0);
-    const [showMinimalLogo, setShowMinimalLogo]= useState(true);
-    console.log(showMinimalLogo);
+    const [showMinimalLogo, setShowMinimalLogo]= useState(false);
+    const [scrollY, setScrollY]= useState(window.scrollY);
+ 
+    // eslint-disable-next-line
+    useEffect(()=> {
+        if(location.pathname === '/'){
+            setShowMinimalLogo(false);
+        }else{
+            setShowMinimalLogo(true)
+        }
+    // eslint-disable-next-line
+    }, [location.pathname]);
+
+    useEffect(()=> {
+        if(location.pathname === '/'){
+            if(window.scrollY > 275){
+                if(!showMinimalLogo) setShowMinimalLogo(true);
+            }else{
+                if(showMinimalLogo) setShowMinimalLogo(false);
+            }
+        }
+    // eslint-disable-next-line
+    }, [scrollY]);
 
     const scrollEventLogo= ()=> {
-        if(window.scrollY > 250) setShowMinimalLogo(true);
-        else setShowMinimalLogo(false);
+        setScrollY(window.scrollY);
     }
 
     useEffect(()=> {
-        console.log(window.scrollY);
-        if(location.pathname === '/'){
-            setShowMinimalLogo(false)
-            document.addEventListener('scroll', scrollEventLogo);
-        }else setShowMinimalLogo(true); 
-        return _ => {
-            window.removeEventListener('scroll', scrollEventLogo)
-        }
-    });
-
-    useEffect(()=> {
-        if(location.pathname === '/') setShowMinimalLogo(false); 
+        document.addEventListener('scroll', scrollEventLogo);
+        if(location.pathname !== '/') setSelectedTab(0);
         if(location.pathname === '/products') setSelectedTab(1);    
         if(location.pathname === '/talk-to-me') setSelectedTab(2);
+
+        return _ => {
+            window.removeEventListener('scroll', scrollEventLogo);
+        }
     // eslint-disable-next-line
-    }, []);    
+    }, []);  
 
     const changedTabs= (event, newvalue)=> {
         setSelectedTab(newvalue);
