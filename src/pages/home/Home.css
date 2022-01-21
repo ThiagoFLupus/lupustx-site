@@ -4,18 +4,8 @@
 
 .video-presentation{
     width: 100%;
-    height: 400px;
     object-fit: fill;
     opacity: 0.7;
-}
-
-.logo-home{
-    width: 80%;
-    margin-top: -340px;
-    margin-left: 10%;
-    height: 300px;
-    background: black;
-    opacity: 0.4;
 }
 
 .sec-presentation{
@@ -25,15 +15,160 @@
     padding: 40px 0px 40px 0px;
 }
 
-.dv-presentation{
-    font-size: 50px;
+.dv-present{
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: .3s;
+    width: 50%;
+}
+
+.right{
+    transform: translate3d(70%, 0, 0);
+}
+
+.left{
+    transform: translate3d(-30%, 0, 0);
+}
+
+.deslize{
+    opacity: 1;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+}
+
+.sec-social-icons{
+    text-align: center;
     color: white;
 }
 
-@media (max-width: 420px) {
-    
+.img-icon{
+    border-radius: 0px;
 }
 
-@media (min-width: 421px) {
-    
+.dv-soc{
+    width: 50%;
+    display: contents;
+    text-align: center;
+}
+
+.sec-cards-products{
+    text-align: center;
+}
+
+@media (max-width: 420px) {
+    .video-presentation{
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+        opacity: 0.7;
+    }
+
+    .logo-home{
+        width: 80%;
+        margin-top: -340px;
+        margin-left: 10%;
+        height: 300px;
+        background: black;
+        opacity: 0.4;
+    }
+
+    .dv-present{
+        font-size: 20px;
+    }
+
+    .dv-slide{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .item-slide{
+        height: 300px;
+    }
+}
+
+@media (min-width: 421px) and (max-width: 650px) {
+    .video-presentation{
+        height: 400px;
+    }
+
+    .logo-home{
+        width: 80%;
+        margin-top: -340px;
+        margin-left: 10%;
+        height: 300px;
+        background: black;
+        opacity: 0.4;
+    }
+
+    .dv-present{
+        font-size: 20px;
+    }
+
+    .dv-slide{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .item-slide{
+        height: 300px;
+    }
+
+}
+
+@media (min-width: 651px){
+    .video-presentation{
+        height: 500px;
+    }
+
+    .logo-home{
+        width: 70%;
+        margin-top: -440px;
+        margin-left: 15%;
+        height: 400px;
+        background: black;
+        opacity: 0.4;
+    }
+
+    .sec-presentation{
+        width: 100%;
+        text-align: center;
+        margin-top: 34px;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .dv-present{
+        font-size: 30px;
+    }
+
+    .dv-slide{
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .item-slide{
+        height: 500px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 950px) {
+    .dv-slide{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .item-slide{
+        height: 500px;
+    }
+}
+
+@media (min-width: 951px) {
+    .dv-slide{
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .item-slide{
+        height: 500px;
+    }
 }

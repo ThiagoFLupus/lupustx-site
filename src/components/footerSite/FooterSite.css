@@ -1,3 +1,51 @@
 .FooterSite {
     width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 10px 100px 10px;
+}
+
+.marca-lupus-footer{
+    text-align: left;
+}
+
+.area-button-to-top{
+    text-align: right;
+}
+
+.divider-line{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.logo-product{
+    height: 100px;
+}
+
+.dv-soc{
+    width: 50%;
+    display: contents;
+    text-align: center;
+}
+
+.link-product{
+    padding: 10%;
+}
+
+@media (max-width: 420px) {
+    .marca-lupus-footer{
+        padding: 20px 0px 20px 30px;
+    }
+}
+
+@media (min-width: 421px) and (max-width: 650px) {
+    .marca-lupus-footer{
+        padding: 30px 0px 20px 80px;
+    }
+}
+
+@media (min-width: 651px){
+    .marca-lupus-footer{
+        padding: 30px 0px 20px 150px;
+    }
 }

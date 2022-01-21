@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import AppBase from "./appBase/AppBase";
 import { setSizeWindow } from "../src/store/general/general.action";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const sizeWindowDispatch= useDispatch();

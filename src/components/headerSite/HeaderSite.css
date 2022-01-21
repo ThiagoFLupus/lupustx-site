@@ -57,6 +57,12 @@ img{
         float: left;
         background: blue;
     }
+
+    .area-menu-header-small{
+        float: right;
+        margin-right: 35px;
+    }
+
     .Tab-component{
        position: fixed; 
        right: 10%;
