@@ -1,0 +1,27 @@
+.HeaderPage{
+    width: 100%;
+}
+
+.area-title-first-title{
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-title-first-img{
+    float: right;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-img-first-img{
+    background-size: 50% 100%;
+}
+
+.area-img-first-title{
+    background-size: 50% 100%;
+}
