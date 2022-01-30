@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import HeaderPage from '../../components/headerPage/HeaderPage';
+import PanelTwoColumns from '../../components/panelTwoColumns/PanelTwoColumns';
 import ImgTalk from '../talkToMe/img-back-talking-to-me.jpg';
 
 function TalkToMe(){
@@ -16,6 +17,10 @@ function TalkToMe(){
                 colorText="white"
                 imgBack={ImgTalk}
             />
+
+            <PanelTwoColumns />
+            <PanelTwoColumns />
+            <PanelTwoColumns />
         </div>
     );
 }

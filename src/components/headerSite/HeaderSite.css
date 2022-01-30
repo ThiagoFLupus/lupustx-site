@@ -23,7 +23,6 @@ img{
         width: 50%;
         height: 100px;
         float: left;
-        background: blue;
     }
     .area-menu-header-small{
         width: 120px;
@@ -55,7 +54,6 @@ img{
         width: 50%;
         height: 100px;
         float: left;
-        background: blue;
     }
 
     .area-menu-header-small{
@@ -85,7 +83,6 @@ img{
         width: 50%;
         height: 100px;
         float: left;
-        background: blue;
     }
     .Tab-component{
         position: fixed; 

@@ -63,8 +63,9 @@ function HeaderSite(props){
         <div className="HeaderSite" style={{background: colorApp.mostStrongBack}}>
             
             <div className="area-logo-header-small">
+                {/* local da logo no menu de navegação */}
                 {showMinimalLogo &&
-                    <img style={{height: '100px', width: '100%', background: 'yellow', marginTop: '0px', marginLeft: '0px'}} alt=""></img>
+                    <img style={{height: '100px', width: '100%', marginTop: '0px', marginLeft: '0px'}} alt=""></img>
                 }
             </div>
 

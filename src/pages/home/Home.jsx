@@ -12,12 +12,12 @@ import slide2 from '../home/images/slide2.jpg';
 
 function Home(){
     const colorApp= useSelector(state=> state.generalReducer.colorApp);
-    const sizeWindowRedux= useSelector(state=> state.generalReducer.width);
+    // const sizeWindowRedux= useSelector(state=> state.generalReducer.width);
     const [scrollY, setScrollY]= useState(window.scrollY);
     const targetDeslize= document.getElementsByClassName('dv-present');
 
     const scrollEventDeslize= ()=> {
-        if(window.scrollY % 50 === 0) setScrollY(window.scrollY);
+        if(window.scrollY % 10 === 0) setScrollY(window.scrollY);
     }
 
     useEffect(()=> {
@@ -30,20 +30,11 @@ function Home(){
 
     useEffect(()=> {
         Array.from(targetDeslize).forEach((target)=> {
-            console.log('heightf: ', sizeWindowRedux);
-            if(sizeWindowRedux < 400){
-                if((scrollY * 3) > target.offsetTop){
+                if((scrollY * 5) > target.offsetTop){
                     target.classList.add('deslize');
                 }else{
                     target.classList.remove('deslize');
                 }
-            }else{
-                if((scrollY * 8) > target.offsetTop){
-                    target.classList.add('deslize');
-                }else{
-                    target.classList.remove('deslize');
-                }
-            }
         })
     // eslint-disable-next-line
     }, [scrollY]);
@@ -65,7 +56,7 @@ function Home(){
 
             </div>
 
-            <section className="sec-presentation" style={{background: colorApp.secondaryBack}}>
+            <section className="sec-presentation" style={{background: colorApp.moreStrongBack}}>
                 <section>
                     <div className="dv-present right"> Simplicidade </div>
                     <div className="dv-present left"> Fluidez </div>
